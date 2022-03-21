@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ArrayObjects</title> 
+    </head>
+    <body>
+        <p id="id"></p>
+        <script>
+            let x=" ";
+            const person ={
+               name : "Ruksana",
+               age:22,
+               eyecolor: "blue",
+               favlanguage :[{name:"C",concepts:["arrays","pointers"]},
+                             {name:"Python",concepts:["modules","function"]}
+            ]
+            };
+            for(let i in person.favlanguage)
+            {
+                 x+="<h2>" +person.favlanguage[i].name +"</h2>" ;
+                for(let j in person.favlanguage[i].concepts)
+                {
+                    x+="<br>"+person.favlanguage[i].concepts[j] +"<br>";
+                }
+            }
+            document.getElementById('id').innerHTML = x;
+       </script>
+    </body>
+</html>

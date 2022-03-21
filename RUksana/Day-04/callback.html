@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Fullname
+        </title>
+    </head>
+     <!--<p id="id"></p> -->
+    <form name="myform"> 
+        <label for="fname">FirstName</label><br>
+        <input type="text" name="fname"><br>
+
+        <lable for="lname">LastName</lable><br>
+        <input type="text" name="lname"><br>
+
+    </form>
+    <button onclick="fullName()">submit</button>
+    <script>
+        function fullName(callback){
+            //document.write("hi");
+            setTimeout(()=>{
+               callback(document.writeln(document.myform.fname.value +" "+ document.myform.lname.value));
+            },7000)
+        }
+        fullName(()=>{});
+    </script>
+</html> 

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Index0fForEach</title></head>
+    <body>
+        <p id="id"></p>
+        <script>
+            const arr=[46,67,11,29,52,0,23];
+            let txt="";
+            arr.forEach(myArr);
+            document.getElementById('id').innerHTML = txt ;
+            function myArr(value,index,array){
+               txt += value+"<br>";   
+            }
+        </script>
+    </body>
+</html>

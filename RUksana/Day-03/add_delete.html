@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add & Delete </title> 
+    </head>
+    <body>
+        <p id="id"></p>
+        <script>
+            const person ={
+               name : "Ruksana",
+               age:22,
+               eyecolor: "blue"
+            };
+            
+            //Adding values from objects
+
+            person.background = "software-developer";//by using '.'
+            person["location"] = "hyderabad"; // by using '[]'
+
+            //deleting values from objects
+            delete  person.age; //by using '.'
+            delete person["name"]; // by using '[]'
+
+            let txt ="";
+            for (let i in person)
+            {
+                txt+=person[i]+" ";
+            }
+            document.getElementById('id').innerHTML= txt;
+        </script>
+    </body>
+</html>

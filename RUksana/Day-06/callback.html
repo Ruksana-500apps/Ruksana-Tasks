@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>Callback</title>
+    </head>
+    <body>
+        <script>
+            function first(){
+                document.write("this is first");
+            }
+            function second(call_first)
+            {
+                document.write("<br>"+"This is second"+"<br>");
+                call_first();
+            }
+            second(first);
+        </script>
+    </body>
+</html>

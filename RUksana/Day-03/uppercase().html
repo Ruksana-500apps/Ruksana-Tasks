@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Methods</title>
+    </head>
+    <p id="id"></p>
+    <p id="id1"></p>
+    <script>
+        const obj = {
+           fname : "Ruksana",
+           lname:"shaik",
+           age : 23,
+           profile :"Software Developer",
+           name : function (){
+               //return "The Name is " +(this.fname +" "+ this.lname).toUpperCase() ;
+               return (this.fname+ " " + this.lname).toUpperCase();
+           }
+        }
+        document.getElementById('id1').innerHTML=obj.name();
+    </script>
+</html>

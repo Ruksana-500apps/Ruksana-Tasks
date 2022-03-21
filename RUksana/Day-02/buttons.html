@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head><title>Operations</title></head>
+<body>
+<h2>Operations </h2>
+<p id='id1'></p>
+<p id='add'></p>
+<p id="remove"></p>
+<p id="id" > </p>
+<P id="reverse"></p>
+<p id="sort"></p>
+<p id="unshift"></p>
+
+ <button onclick="addValue()" > AddValue</button>
+ <button onclick="removeValue()">RemoveValue</button>
+ <button onclick="reverse()">Reverse</button>
+ <button onclick="sort()">Sort</button>
+ <button onclick="add0Postion()">AddFirstPosition</button>
+<script>
+ const arr = [6,2,9,1,0,7,4,3,8];
+ document.getElementById('id1').innerHTML = "ARRAY IS";
+ document.getElementById('id').innerHTML = arr ;
+
+//ADDING VALUE
+
+  function addValue(){
+    let num=prompt("Enter Number");
+    if(num > 5)
+    {
+      for(let i = 0 ; i<=arr.length; i++)
+      {
+        if(arr[i] > 5)
+        {
+          document.getElementById('add').innerHTML = arr.push(num);
+          break;
+        }
+      }
+    }
+    else{
+      alert("can't add enter value above 5");
+    }
+    document.getElementById('id').innerHTML = arr;
+   }
+   
+//REMOVE VALUE
+
+   function removeValue(){
+     let n=prompt("Enter the number");
+     for(let i=0 ; i<=arr.length ; i++)
+     {
+       if(arr[i]<5)
+       {
+         document.getElementById('remove').innerHTML = arr.pop() ;
+         break;
+       }
+       else
+       {
+         alert("Can't remove enter the value below 5");
+       }
+     document.getElementById('id').innerHTML = arr;
+    }
+   }
+
+//REVERSE VALUE
+
+   function reverse(){
+     let str=prompt("TO reverse array enter reverse keyword");
+     if(str =="reverse")
+     {
+       document.getElementById('reverse').innerHTML = arr.reverse();
+     }
+     else
+     {
+       alert("Enter reverse keyword correctly");
+     }
+    }
+    
+//SORTING VALUE
+   
+   function sort(){
+     document.getElementById('id').innerHTML = arr ;
+     let so=prompt("Enter SORT Keyword ");
+     if(so=="sort")
+     {
+       document.getElementById('sort').innerHTML = arr.sort();
+     }
+     else 
+     {
+       console.log("enter correct keyword");
+     }
+    }
+
+//ADD 0TH POSITION 
+ 
+  
+</script>
+<body>
+</html>

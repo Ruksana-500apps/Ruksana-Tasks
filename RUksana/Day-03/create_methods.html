@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Methods</title>
+    </head>
+    <p id="id"></p>
+    <p id="id1"></p>
+    <script>
+        const obj = {
+           fname : "Ruksana",
+           lname:"shaik",
+           age : 23,
+           profile :"Software Developer",
+           fullname : function(){
+               return this.fname + " " +this.lname ;
+           }
+       };
+       document.getElementById('id').innerHTML = obj.fullname(); // it will return the fullname
+       document.getElementById('id1').innerHTML = obj.fullname; // it will return the function definition
+    </script>
+</html>

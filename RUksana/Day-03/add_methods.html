@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Methods</title>
+    </head>
+    <p id="id"></p>
+    <p id="id1"></p>
+    <script>
+        const obj = {
+           fname : "Ruksana",
+           lname:"shaik",
+           age : 23,
+           profession :"Software Developer"
+        }
+        obj.profile =function(){
+            return this.fname+" " + "is a" +" " +this.profession ;
+        }
+        document.getElementById('id').innerHTML = obj.profile();
+    </script>
+   </html>

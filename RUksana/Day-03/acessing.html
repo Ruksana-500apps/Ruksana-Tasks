@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Accessing</title></head>
+    <body>
+        <p id="id"></p>
+        <p id="id2"></p>
+        <p id="id3"></p>
+        <p id="f1"></p>
+        <p id="f2"></p>
+        <script>
+         //car object
+
+          const car ={
+              name : "Audi" ,
+              color:"White" ,
+              cost : "5000000"
+          };
+          let x="cost";
+
+          //ways to accessing oject values
+
+          document.getElementById('id').innerHTML ="using ." + car.color; // using '.'
+          document.getElementById('id2').innerHTML ="using []"+ car["name"]; // using '[]'
+          document.getElementById('id3').innerHTML="using expression" +car[x]; //expression 
+          document.getElementById('f1').innerHTML = "The Car company is " + car.name + ". Its color is " + car.color + ". And its cost is " + car.cost;
+        
+        //Using for in loop
+        let txt=" ";
+        for(let y in car ){
+              txt+= car[y] + " ";
+        }
+        document.getElementById('f2').innerHTML ="using for in loop"+txt ;
+        </script> 
+    </body>
+</html>

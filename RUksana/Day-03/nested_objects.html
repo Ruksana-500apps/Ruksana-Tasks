@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add & Delete </title> 
+    </head>
+    <body>
+        <p id="id"></p>
+        <p id="id1"></p>
+        <p id="id3"></p>
+        <p id="id4"></p>
+        <script>
+            const person ={
+               name :{firstname : "Ruksana", lastname : "Shaik"},
+               age:22,
+               eyecolor: "blue",
+               favcolor : {
+                   color1:"blue",
+                   color2:"red",
+                   color3:"green"
+               }
+            };
+
+            let p1 = "favcolor";
+            let p2 ="color2";
+            document.getElementById('id').innerHTML = person.name.lastname;
+            document.getElementById('id1').innerHTML = person.name["firstname"];
+            document.getElementById('id3').innerHTML =person["favcolor"]["color1"];
+            document.getElementById('id4').innerHTML =person[p1][p2];
+       </script>
+    </body>
+</html>
